@@ -22,11 +22,21 @@
 # include <stdlib.h>
 # include "../libft/libft.h"
 
+typedef struct	s_coord
+{
+	char		*room;
+	int			x;
+	int			y;
+	int			st_or_end;
+}				t_coord;
+
 typedef struct	s_lem
 {
 	int			n;//number of ants
-	int			k;//number of lines in map
-	char		*map[200];
+	int			rooms;//number of rooms
+	char		**map;
+	t_coord		*coord;
 }				t_lem;
+
 
 #endif
